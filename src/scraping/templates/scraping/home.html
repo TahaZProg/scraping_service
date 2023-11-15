@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% for obj in object_list%}
+        <div class="card my-3">
+          <div class="card-header">
+            <a href=obj.url>{{obj.title}}</a>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">{{obj.city}}</h5>
+            <p class="card-text">{{obj.description}}</p>
+          </div>
+        </div>
+    {% endfor %}
+{% endblock %}
